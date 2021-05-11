@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Objects</title>
+    </head>
+    <body>
+        <h1>Objects</h1>
+        <script>
+            function cars ()
+            {var car1={
+                brand : "rolls royce" , 
+                model : "ghost" ,
+                price : 1000000 , 
+                color : "black & white",
+                auto_gear: function() { document.write("This car has automatic gear") ; } 
+            } ;
+            
+            var car2={
+                brand : "honda" , 
+                model : "civic" ,
+                price : 50000 , 
+                color : "blue",
+                manual_gear: function() { document.write("This car has maual gear") ; } 
+            } ;
+
+            var car3={
+                brand : "nissan" , 
+                model : "pathfinder" ,
+                price : 600000 , 
+                color : "red",
+                auto_gear: function() { document.write("This car has automatic gear") ; } 
+            } ;
+            document.write("Brand of the car is : " + car1.brand+ "<br>"+"Mondel of car is  : "+ car1.model + "<br>"+"Price of the car is : "+ car1.price + "<br>"+ "Color of the car is :  " +car1.color + "<br>")
+            car1.auto_gear();
+            document.write("<br><br><br>");
+            document.write("Brand of the car is : " + car2.brand+ "<br>"+"Mondel of car is  : "+ car2.model + "<br>"+"Price of the car is : "+ car2.price + "<br>"+ "Color of the car is :  " +car2.color + "<br>")
+            car2.manual_gear();
+            document.write("<br><br><br>");
+            document.write("Brand of the car is : " + car3.brand+ "<br>"+"Mondel of car is  : "+ car3.model + "<br>"+"Price of the car is : "+ car3.price + "<br>"+ "Color of the car is :  " +car3.color + "<br>")
+            car3.auto_gear();}
+            document.write("<br><br><br>");
+
+            cars();
+       </script>
+    </body>
+</html>

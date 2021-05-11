@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Digital Clock</title>
+        <style>
+            div{
+            background-color: yellow;
+            color:red;
+            font-size:50px;
+            text-align:center;
+            font-family: jokerman;
+            text-shadow: yellow;
+            border:black 5px ridge;
+            border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 >Digital Clock</h1>
+        <div id="time"></div>
+        <br>
+        <br>
+        <div id="date"></div>
+            <script>
+            function clock()
+            {//date object
+            var time = new Date(); // copy of date object
+            var hour = time.getHours(); // to get hours
+            var min = time.getMinutes(); // to get minutes
+            var sec = time.getSeconds(); // to get seconds
+            var mili = time.getMilliseconds(); 
+            var day = time.getDate();
+            var month = time.getMonth() + 1;
+            var year = time.getFullYear();
+            var meridian = "AM";
+
+            if (hour > 12){
+                hour = hour-12
+                meridian = "PM"
+            }
+            else{
+                meridian="AM"
+            }
+            if (sec<10)
+            {
+               sec= "0" + sec;
+            }
+
+            if (hour<10)
+            {
+               hour= "0" + hour;
+            }
+
+            if (min<10)
+            {
+               min= "0" + min;
+            }
+
+            if (day<10)
+            {
+               day= "0" + day;
+            }
+
+            if (month<10)
+            {
+               month= "0" + month;
+            }
+            var x = hour + ":" + min + ":" + sec + ":" + mili + "<br>" + meridian; // vaeiable to print in proper format
+            var d = day + "/" + month + "/" + year  ;
+            document.getElementById("time").innerHTML = x;
+            document.getElementById("date").innerHTML = d;}
+            //clock();
+
+            //set interval
+            // it is a function in javascript , to call a function repeatedly 
+
+            setInterval(clock , 1);
+           
+        </script>
+    </body>
+</html>

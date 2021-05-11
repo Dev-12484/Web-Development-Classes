@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class List</title>
+        <style>
+            .sample{
+                font-family: jokerman;
+                color:red;
+                font-size:30px;
+                background-color: yellow;
+                text-align: center;
+                border:orange 10px groove;
+            }
+        </style>
+    </head>
+    <body >
+        <h1 id="button">Class List Property</h1>
+        <button onclick="change()">Click me</button>
+        <script>
+            function change(){
+                // document.getElementById("button").classList.add("sample");
+                // document.getElementById("button").classList.remove("sample");
+                document.getElementById("button").classList.toggle("sample");
+            }
+        </script>
+    </body>
+</html>
